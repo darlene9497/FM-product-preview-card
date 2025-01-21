@@ -4,6 +4,7 @@
     --VeryDarkBlue: hsl(212, 21%, 14%);
     --DarkGrayishBlue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
+    --HoverCyan: hsl(159, 39%, 49%);
 }
 
 body {
@@ -46,7 +47,7 @@ h2,
 
 h1 {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.8em;
     letter-spacing: 0.3em;
     font-weight: 500;
     color: var(--DarkGrayishBlue);
@@ -54,12 +55,12 @@ h1 {
 
 h2 {
     font-family: "Fraunces", serif;
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: var(--VeryDarkBlue);
 }
 
 p {
-    font-size: 0.82em;
+    font-size: 0.8em;
     color: var(--DarkGrayishBlue);
     line-height: 1.8;
 }
@@ -100,4 +101,39 @@ button {
 
 button img {
     margin-right: 0.8em;
+}
+
+button:hover {
+    background-color: var(--HoverCyan);
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+    main {
+        flex-direction: column;
+    }
+
+    .product-img img {
+        content: url('./images/image-product-mobile.jpg');
+    }
+
+    h1 {
+        font-size: 0.85em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.89em;
+    }
+
+    h2 br,
+    p br {
+        display: none;
+    }
 }
